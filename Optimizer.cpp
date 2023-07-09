@@ -5,74 +5,7 @@
 using namespace std;
 int choice;
 int choice2;
-
 bool shouldExit = false;
-
-void optimization() //install
-{
-	system("Start C:\\ProgramData\\Dragon-Center.zip");
-	system("ipconfig /flushdns");
-	system("ipconfig /registerdns");
-	system("ipconfig /release");
-	system("ipconfig /renew");
-	system("netsh winsock reset");
-}
-
-void win10home() {
-	system("slmgr /ipk TX9XD-98N7V-6WMQ6-BX7FG-H8Q99");
-	system("slmgr /skms kms8.msguides.com");
-	system("slmgr /ato");
-	system("cls");
-}
-
-void win10homeN() {
-	system("slmgr /ipk 3KHY7-WNT83-DGQKR-F7HPR-844BM");
-	system("slmgr /skms kms8.msguides.com");
-	system("slmgr /ato");
-	system("cls");
-}
-
-void win10pro() {
-	system("slmgr /ipk W269N-WFGWX-YVC9B-4J6C9-T83GX");
-	system("slmgr /skms kms8.msguides.com");
-	system("slmgr /ato");
-	system("cls");
-}
-
-void win10proN() {
-	system("slmgr /ipk MH37W-N47XK-V7XM9-C7227-GCQG9");
-	system("slmgr /skms kms8.msguides.com");
-	system("slmgr /ato");
-	system("cls");
-}
-
-void win10edu() {
-	system("slmgr /ipk NW6C2-QMPVW-D7KKK-3GKT6-VCFB2");
-	system("slmgr /skms kms8.msguides.com");
-	system("slmgr /ato");
-	system("cls");
-}
-
-void win10eduN() {
-	system("slmgr /ipk 2WH4N-8QGBV-H22JP-CT43Q-MDWWJ");
-	system("slmgr /skms kms8.msguides.com");
-	system("slmgr /ato");
-	system("cls");
-}
-
-void win10ent() {
-	system("slmgr /ipk NPPR9-FWDCX-D2C8J-H872K-2YT43");
-	system("slmgr /skms kms8.msguides.com");
-	system("slmgr /ato");
-	system("cls");
-}
-
-void win10entN() {
-	system("slmgr /ipk DPH2V-TTNVB-4X9Q3-TJR4H-KHJW4");
-	system("slmgr /skms kms8.msguides.com");
-	system("slmgr /ato");
-	system("cls");
-}
 
 void OptimizerTitle() {
 	HANDLE hStdOut = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -125,6 +58,7 @@ void ActivationTitle() {
 	std::cout << raw_str;
 }
 int main() {
+	SetSize();
 	while (!shouldExit) {
 		OptimizerTitle();
 		cin >> choice;
