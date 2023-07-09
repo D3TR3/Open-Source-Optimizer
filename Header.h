@@ -27,16 +27,6 @@ using namespace std;
 RECT rc;
 RECT rect;
 
-#undef max
-static const char alphanum[] = "0123456789" "ABCDEFGHIJKLMNOPQRSTUVWXYZ" "abcdefghijklmnopqrstuvwxyz"; // he has a brain atleast
-
-int stringLength1 = sizeof(alphanum) - 1;
-
-char genRandom1()//char gen in title
-{
-
-	return alphanum[rand() % stringLength1];
-}
 void MakeSexy()
 {
 	HWND hwnd = GetConsoleWindow();
@@ -48,24 +38,3 @@ void MakeSexy()
 	int yPos = (GetSystemMetrics(SM_CYSCREEN) - rc.bottom) / 2;
 	SetWindowPos(hwnd, 0, xPos, yPos, 0, 0, SWP_NOZORDER | SWP_NOSIZE);
 }
-
-void SetRandomTitle()//random
-{
-	srand(time(0));
-	std::string Str = "";
-	for (unsigned int i = 0; i < 60; ++i)
-	{
-		Str += genRandom1();
-
-	}
-
-	SetConsoleTitleA(Str.c_str());
-
-}
-
-void SetTitle(_In_ LPCSTR lpConsoleTitle)
-{
-	SetConsoleTitleA(lpConsoleTitle);
-	return;
-}
-
